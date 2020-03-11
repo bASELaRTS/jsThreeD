@@ -4,6 +4,13 @@ class Game extends Engine {
   }
   setup(){
   }
+  update(){
+    var m = Matrix4.create();
+    var v41 = new Vector4();
+    var v42 = new Vector4();
+    v41.setCoordinates(1,1,1,1);
+    Matrix4.multiplyVector4(v41,m,v42);
+  }
   paint(){
     //this.graphics.clear();
     var i = 0;
@@ -27,4 +34,4 @@ class Game extends Engine {
     span.innerText  = ""+this.timer.fps;
     span.innerText += "\r\n"+this.entities.count();
   }
-}      
+}
